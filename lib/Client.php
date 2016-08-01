@@ -114,6 +114,29 @@ class Client
   public $users;
 
   /**
+   * @var \BaseCRM\ProductsService Access all Products related actions.
+   * @see \BaseCRM\ProductsService
+   * @see \BaseCRM\Product
+   */
+  public $products;
+
+  /**
+   * @var \BaseCRM\LineItemsService Access all Line Item related actions.
+   * @see \BaseCRM\LineItemsService
+   * @see \BaseCRM\LineItem
+   */
+  public $lineItems;
+
+  /**
+   * @var \BaseCRM\OrdersService Access all Orders related actions.
+   * @see \BaseCRM\OrdersService
+   * @see \BaseCRM\Order
+   */
+  public $orders;
+
+
+
+  /**
    * @var \BaseCRM\SyncService Access all Sync API related actions.
    * @see \BaseCRM\SyncService
    */
@@ -162,6 +185,10 @@ class Client
     $this->tags = new TagsService($this->httpClient);
     $this->tasks = new TasksService($this->httpClient);
     $this->users = new UsersService($this->httpClient);
+    $this->products = new ProductsService($this->httpClient);
+    $this->lineItems = new LineItemsService($this->httpClient);
+    $this->orders = new OrdersService($this->httpClient);
+
 
     $this->sync = new SyncService($this->httpClient);
   }
