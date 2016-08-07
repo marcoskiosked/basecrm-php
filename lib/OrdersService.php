@@ -16,7 +16,7 @@ class OrdersService
   /**
    * Instantiate a new OrdersService instance.
    *
-   * @param BaseCRM\HttpClient $httpClient Http client.
+   * @param HttpClient $httpClient Http client.
    */
   public function __construct(HttpClient $httpClient)
   {

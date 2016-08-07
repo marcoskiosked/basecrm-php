@@ -16,7 +16,7 @@ class ProductsService
   /**
    * Instantiate a new ProductsService instance.
    *
-   * @param BaseCRM\HttpClient $httpClient Http client.
+   * @param HttpClient $httpClient Http client.
    */
   public function __construct(HttpClient $httpClient)
   {
